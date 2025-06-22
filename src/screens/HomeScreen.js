@@ -11,7 +11,7 @@ import {
 function SimpleIcon() {
   return (
     <View style={iconStyles.container}>
-      <Text style={iconStyles.helmet}>🟡</Text>
+      <Text style={iconStyles.helmet}>🟠</Text>
       <Text style={iconStyles.tools}>🔧⚒️</Text>
       <Text style={iconStyles.checklist}>📋</Text>
     </View>
@@ -44,9 +44,9 @@ export default function HomeScreen({ navigation }) {
         <View style={styles.iconContainer}>
           <SimpleIcon />
         </View>
-        
+
         <Text style={styles.title}>Cadastro de Obras em Andamento</Text>
-        
+
         <View style={styles.buttonContainer}>
           <TouchableOpacity
             style={styles.button}
@@ -54,7 +54,7 @@ export default function HomeScreen({ navigation }) {
           >
             <Text style={styles.buttonText}>Cadastrar Nova Obra</Text>
           </TouchableOpacity>
-          
+
           <TouchableOpacity
             style={styles.button}
             onPress={() => navigation.navigate('Lista')}
@@ -62,7 +62,7 @@ export default function HomeScreen({ navigation }) {
             <Text style={styles.buttonText}>Listar Obras</Text>
           </TouchableOpacity>
         </View>
-        
+
         <Text style={styles.subtitle}>
           Redirecionando para o Cadastro de Obra...
         </Text>
@@ -74,7 +74,7 @@ export default function HomeScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1a365d',
+    backgroundColor: '#1f1f1f', // Cinza escuro
   },
   content: {
     flex: 1,
@@ -84,14 +84,14 @@ const styles = StyleSheet.create({
   },
   iconContainer: {
     marginBottom: 40,
-    backgroundColor: '#2d5a87',
+    backgroundColor: '#333333', // Cinza médio
     padding: 30,
     borderRadius: 20,
   },
   title: {
     fontSize: 28,
     fontWeight: 'bold',
-    color: '#ffd700',
+    color: '#FFA500', // Laranja
     textAlign: 'center',
     marginBottom: 50,
   },
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   button: {
-    backgroundColor: '#ffd700',
+    backgroundColor: '#FFA500', // Laranja
     paddingVertical: 18,
     paddingHorizontal: 30,
     borderRadius: 12,
@@ -108,14 +108,14 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   buttonText: {
-    color: '#1a365d',
+    color: '#1f1f1f', // Cinza escuro
     fontSize: 18,
     fontWeight: '600',
     textAlign: 'center',
   },
   subtitle: {
     fontSize: 16,
-    color: '#a0aec0',
+    color: '#a0aec0', // Cinza claro
     textAlign: 'center',
   },
 });

@@ -40,11 +40,11 @@ export default function CadastroScreen({ navigation }) {
       const obras = obrasSalvas ? JSON.parse(obrasSalvas) : [];
       obras.push(obra);
       await AsyncStorage.setItem('obras', JSON.stringify(obras));
-      
+
       Alert.alert('Sucesso', 'Obra cadastrada com sucesso!', [
         { text: 'OK', onPress: () => navigation.goBack() }
       ]);
-      
+
       // Limpar formulário
       setNomeObra('');
       setEndereco('');
@@ -59,7 +59,7 @@ export default function CadastroScreen({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity 
+        <TouchableOpacity
           style={styles.backButton}
           onPress={() => navigation.goBack()}
         >
@@ -127,7 +127,7 @@ export default function CadastroScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1a365d',
+    backgroundColor: '#1f1f1f', // Cinza escuro
   },
   header: {
     paddingHorizontal: 20,
@@ -138,13 +138,13 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   backButtonText: {
-    color: '#ffd700',
+    color: '#FFA500', // Laranja
     fontSize: 16,
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#ffd700',
+    color: '#FFA500', // Laranja
     textAlign: 'center',
   },
   content: {
@@ -161,24 +161,24 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
   input: {
-    backgroundColor: '#2d5a87',
+    backgroundColor: '#333333', // Cinza médio
     borderRadius: 8,
     paddingHorizontal: 15,
     paddingVertical: 12,
     fontSize: 16,
     color: '#ffffff',
     borderWidth: 1,
-    borderColor: '#4a90a4',
+    borderColor: '#555555', // Cinza claro
   },
   button: {
-    backgroundColor: '#ffd700',
+    backgroundColor: '#FFA500', // Laranja
     paddingVertical: 15,
     borderRadius: 8,
     marginTop: 30,
     marginBottom: 20,
   },
   buttonText: {
-    color: '#1a365d',
+    color: '#1f1f1f', // Cinza escuro
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',

@@ -62,7 +62,7 @@ export default function ListaScreen({ navigation }) {
           <Text style={styles.statusText}>{item.status}</Text>
         </View>
       </View>
-      
+
       <Text style={styles.obraInfo}>📍 {item.endereco}</Text>
       <Text style={styles.obraInfo}>👤 {item.responsavel}</Text>
       <Text style={styles.obraInfo}>📅 Início: {item.dataInicio}</Text>
@@ -70,7 +70,7 @@ export default function ListaScreen({ navigation }) {
         <Text style={styles.obraInfo}>🏁 Previsão: {item.previsaoTermino}</Text>
       )}
       <Text style={styles.obraData}>Cadastrado em: {item.dataCadastro}</Text>
-      
+
       <TouchableOpacity
         style={styles.removeButton}
         onPress={() => removerObra(item.id)}
@@ -83,7 +83,7 @@ export default function ListaScreen({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity 
+        <TouchableOpacity
           style={styles.backButton}
           onPress={() => navigation.goBack()}
         >
@@ -118,7 +118,7 @@ export default function ListaScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1a365d',
+    backgroundColor: '#1f1f1f', // Cinza escuro
   },
   header: {
     paddingHorizontal: 20,
@@ -129,25 +129,25 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   backButtonText: {
-    color: '#ffd700',
+    color: '#FFA500', // Laranja
     fontSize: 16,
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#ffd700',
+    color: '#FFA500', // Laranja
     textAlign: 'center',
   },
   listContainer: {
     padding: 20,
   },
   obraCard: {
-    backgroundColor: '#2d5a87',
+    backgroundColor: '#333333', // Cinza médio
     borderRadius: 12,
     padding: 16,
     marginBottom: 16,
     borderWidth: 1,
-    borderColor: '#4a90a4',
+    borderColor: '#555555', // Cinza claro
   },
   obraHeader: {
     flexDirection: 'row',
@@ -162,14 +162,14 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   statusBadge: {
-    backgroundColor: '#ffd700',
+    backgroundColor: '#FFA500', // Laranja
     paddingHorizontal: 8,
     paddingVertical: 4,
     borderRadius: 6,
   },
   statusText: {
     fontSize: 12,
-    color: '#1a365d',
+    color: '#1f1f1f', // Cinza escuro
     fontWeight: 'bold',
   },
   obraInfo: {
@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   removeButton: {
-    backgroundColor: '#e53e3e',
+    backgroundColor: '#cc5500', // Laranja queimado
     paddingVertical: 8,
     paddingHorizontal: 12,
     borderRadius: 6,
@@ -208,13 +208,13 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   addButton: {
-    backgroundColor: '#ffd700',
+    backgroundColor: '#FFA500', // Laranja
     paddingVertical: 15,
     paddingHorizontal: 30,
     borderRadius: 8,
   },
   addButtonText: {
-    color: '#1a365d',
+    color: '#1f1f1f', // Cinza escuro
     fontSize: 16,
     fontWeight: 'bold',
   },
